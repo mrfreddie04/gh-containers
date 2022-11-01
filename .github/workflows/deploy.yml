@@ -14,7 +14,7 @@ jobs:
       MONGODB_CONNECTION_PROTOCOL: mongodb #mongodb+srv
       MONGODB_CLUSTER_ADDRESS: mongodb #cluster0.inwomz5.mongodb.net 
       MONGODB_USERNAME: root #${{ secrets.MONGODB_USERNAME }}
-      MONGODB_PASSWORD: exmple #${{ secrets.MONGODB_PASSWORD }}
+      MONGODB_PASSWORD: example #${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     runs-on: ubuntu-latest
     container: 
