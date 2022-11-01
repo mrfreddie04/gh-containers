@@ -25,6 +25,10 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ env.CACHE_KEY }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Output information 1
+        run: |
+          echo "MONGODB_USERNAME: $MONGODB_USERNAME"
+          echo "PORT: $PORT"
       - name: Install dependencies
         run: npm ci
       - name: Run server
