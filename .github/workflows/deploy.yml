@@ -14,10 +14,8 @@ jobs:
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.ntrwp.mongodb.net
-      #${{ secrets.MONGODB_USERNAME }}
-      MONGODB_USERNAME: peter 
-      #${{ secrets.MONGODB_PASSWORD }}
-      MONGODB_PASSWORD: Apteka20NJS 
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     steps:
       - name: Get Code
