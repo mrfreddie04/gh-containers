@@ -12,16 +12,18 @@ jobs:
     environment: testing
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb #mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: mongodb #cluster0.inwomz5.mongodb.net 
+      MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017 #mongodb #cluster0.inwomz5.mongodb.net 
       MONGODB_USERNAME: root #${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: example #${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     runs-on: ubuntu-latest
-    container: 
-      image: node:16    
+    # container: 
+    #   image: node:16    
     services:   
       mongodb: 
         image: mongo
+        ports: 
+          - 27017:27017
         env:
           MONGO_INITDB_ROOT_USERNAME: root
           MONGO_INITDB_ROOT_PASSWORD: example
